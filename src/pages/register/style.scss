@@ -1,0 +1,176 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 400px;
+  margin: 50px auto 0;
+  padding: 40px;
+  background-color: #161d2f;
+  border-radius: 10px;
+  color: white;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: left;
+  }
+
+}
+.cut-icon-container {
+  display: flex;
+  place-content: center;
+  margin-top: 100px;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-wrapper {
+  position: relative; 
+  width: 100%;
+}
+
+.input-field {
+  width: 90%;
+  padding: 16px;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 1px solid #5a698f;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+
+  &::placeholder {
+    color: #5a698f;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #fc4747;
+  }
+}
+
+.error-message {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  color: #fc4747;
+  font-size: 12px;
+  white-space: nowrap;
+  background-color: transparent;
+  padding: 0 4px;
+}
+
+.submit-button {
+  padding: 14px;
+  background-color: #fc4747;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+
+  &:hover {
+    background-color: #ff6666;
+  }
+}
+
+.login-link {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+
+  .link {
+    color: #fc4747;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .register-container {
+    max-width: 360px;
+    padding: 36px;
+    margin-top: 80px;
+  }
+
+  .register-container h2 {
+    font-size: 28px;
+  }
+
+  .input-field,
+  .submit-button {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .error-message {
+    font-size: 11px;
+    right: 14px;
+  }
+
+  .login-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    max-width: 320px;
+    padding: 32px;
+    margin-top: 60px;
+  }
+
+  .register-container h2 {
+    font-size: 26px;
+  }
+
+  .input-field,
+  .submit-button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .error-message {
+    font-size: 10px;
+    right: 12px;
+  }
+
+  .login-link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    max-width: 280px;
+    padding: 28px;
+    margin-top: 40px;
+  }
+
+  .register-container h2 {
+    font-size: 24px;
+  }
+
+  .input-field,
+  .submit-button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .error-message {
+    font-size: 9px;
+    right: 10px;
+  }
+
+  .login-link {
+    font-size: 12px;
+  }
+}

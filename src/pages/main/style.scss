@@ -1,0 +1,181 @@
+.trending-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .section-title {
+    font-size: 32px;
+    color: white;
+    font-weight: 300;
+  }
+
+  .no-results {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #5a698f;
+    text-align: center;
+  }
+
+  .trending-scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 40px;
+    padding-bottom: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: #5a698f #10141e;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .trending-card {
+    flex: 0 0 300px;
+    background: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .poster-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+  }
+
+  .poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bookmark-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .movie-meta {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    color: #5a698f;
+    font-size: 13px;
+  }
+
+  .movie-year,
+  .movie-type,
+  .movie-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .movie-title {
+    margin-top: 4px;
+    font-size: 15px;
+    color: white;
+    line-height: 1.2;
+  }
+  @media (max-width: 1024px) {
+    gap: 32px;
+
+    .section-title {
+      font-size: 28px;
+    }
+    .trending-scroll {
+      gap: 32px;
+      padding-bottom: 14px;
+    }
+    .trending-card {
+      flex: 0 0 260px;
+    }
+    .bookmark-icon {
+      top: 14px;
+      right: 14px;
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
+    }
+    .movie-meta {
+      font-size: 12px;
+      gap: 6px;
+    }
+    .movie-title {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 24px;
+
+    .section-title {
+      font-size: 24px;
+    }
+    .trending-scroll {
+      gap: 24px;
+      padding-bottom: 12px;
+    }
+    .trending-card {
+      flex: 0 0 220px;
+    }
+    .bookmark-icon {
+      top: 12px;
+      right: 12px;
+      width: 26px;
+      height: 26px;
+      font-size: 13px;
+    }
+    .movie-meta {
+      font-size: 11px;
+      gap: 5px;
+    }
+    .movie-title {
+      font-size: 13px;
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    gap: 20px;
+
+    .section-title {
+      font-size: 20px;
+      text-align: center;
+    }
+    .trending-scroll {
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+    .trending-card {
+      flex: 0 0 180px;
+    }
+    .bookmark-icon {
+      top: 10px;
+      right: 10px;
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+    }
+    .movie-meta {
+      font-size: 10px;
+      gap: 4px;
+    }
+    .movie-title {
+      font-size: 12px;
+    }
+  }
+}

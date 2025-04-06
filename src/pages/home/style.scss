@@ -1,0 +1,189 @@
+.home-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #10141e;
+
+  .sidebar {
+    width: 96px;
+    background-color: #161d2f;
+    color: white;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-logo {
+    margin-bottom: 58px;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    .nav-icon {
+      width: 24px;
+      height: 24px;
+      filter: grayscale(100%) brightness(70%); 
+    }
+
+    &:hover .nav-icon {
+      filter: grayscale(0%) hue-rotate(130deg) saturate(500%) brightness(90%); 
+    }
+
+    &.active .nav-icon {
+      filter: grayscale(0%) brightness(200%); 
+    }
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #5a698f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+  }
+
+  .search-container {
+    margin-bottom: 32px;
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .search-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+
+    &::placeholder {
+      color: #5a698f;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid #5a698f;
+    }
+  }
+
+  .content-area {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    height: auto;
+
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 16px 0;
+
+      .app-logo {
+        margin-bottom: 0;
+      }
+
+      .navigation {
+        flex-direction: row;
+        gap: 24px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .avatar {
+        margin-top: 0;
+      }
+    }
+
+    .main-content {
+      padding: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      padding: 12px 0;
+
+      .navigation {
+        gap: 16px;
+      }
+
+      .nav-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .main-content {
+      padding: 16px;
+
+      .search-container {
+        margin-bottom: 24px;
+      }
+
+      .search-input {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sidebar {
+      padding: 8px 0;
+
+      .navigation {
+        gap: 12px;
+      }
+
+      .nav-icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .main-content {
+      padding: 12px;
+
+      .search-input {
+        font-size: 16px;
+      }
+    }
+  }
+}

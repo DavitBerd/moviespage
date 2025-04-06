@@ -1,0 +1,12 @@
+import bookmark from "../../imgs/Bookmark.png";
+import movies from "../../imgs/Shape(1).png";
+import menu from "../../imgs/Shape.png";
+import cutthingy from "../../imgs/Movie.png";
+import tv from "../../imgs/tv.png";
+import search from "../../imgs/search.png";
+export const Bookmark = bookmark;
+export const MoviesIcon = movies;
+export const MenuIcon = menu;
+export const CutIcon = cutthingy;
+export const TVIcon = tv;
+export const SearchIcon = search;

@@ -1,0 +1,19 @@
+.bookmarked-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bookmarked-section {
+  h2 {
+    font-size: 32px;
+    color: white;
+    font-weight: 300;
+  }
+}
+
+.no-results {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #5a698f;
+}
