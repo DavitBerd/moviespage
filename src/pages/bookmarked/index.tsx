@@ -7,7 +7,7 @@ import { mockBookmarkedItems } from "../../components/data";
 
 const Bookmarked = () => {
   const [allBookmarked, setAllBookmarked] = useState<Movie[]>([]);
-  const [filteredBookmarked, setFilteredBookmarked] = useState<Movie[]>([]);
+  const [, setFilteredBookmarked] = useState<Movie[]>([]);
   const [bookmarkedMovies, setBookmarkedMovies] = useState<Movie[]>([]);
   const [bookmarkedTvSeries, setBookmarkedTvSeries] = useState<Movie[]>([]);
   const { searchQuery } = useSearch();
