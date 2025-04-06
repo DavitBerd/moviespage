@@ -53,7 +53,7 @@ const LogIn = () => {
           <div className="input-wrapper">
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Datobato@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="input-field"
@@ -64,7 +64,7 @@ const LogIn = () => {
           <div className="input-wrapper">
             <input
               type="password"
-              placeholder="Password"
+              placeholder="123456"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="input-field"
