@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import MovieGrid from "../../components/MovieGrid";
+import MovieGrid from "../../components/moviegrid";
 import { Movie } from "../../types/type";
 import { useSearch } from "../home";
 import "./style.scss";
